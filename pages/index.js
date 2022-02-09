@@ -7,6 +7,15 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
+  const newTab = () => {
+    window.open('https://amazon-clone-git-main-intiaj.vercel.app/', "_blank")
+  }
+  const newTab1 = () => {
+    window.open('https://medium-clone-ten.vercel.app', "_blank")
+  }
+  const newTab2 = () => {
+    window.open('https://web-3-git-main-intiaj.vercel.app/', "_blank")
+  }
   return (
     <div>
       <Head>
@@ -26,12 +35,11 @@ export default function Home() {
             Hi, I’m Intiaj. Nice to meet you.
           </h1>
           <h2 className="text-white text-xl mx-80 py-8 font-semibold text-center">
-            Since beginning my journey as a freelance designer nearly 10 years
-            ago, I've done remote work for agencies, consulted for startups, and
-            collaborated with talented people to create digital products for
-            both business and consumer use. I'm quietly confident, naturally
-            curious, and perpetually working on improving my chops one design
-            problem at a time.
+            I can conjur a website from nothing into existence,
+            fully formed. I do not use tricks, nor is this magic.
+            I specialize in manipulating the very fabric of the web, its raw materials
+            of HTML, CSS, JavaScript, and SVG.
+            I can plan, design, build, launch, and maintain a website myself—did I mention that I build mobile apps too?
           </h2>
         </div>
 
@@ -73,20 +81,15 @@ export default function Home() {
                   Design Tools I Use:
                 </h3>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  Figma
                 </h2>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
                   Balsamiq Mockups
                 </h2>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  Adobe XD
                 </h2>
-                <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
-                </h2>
-                <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
-                </h2>
+
               </div>
 
               <div className="py-12">
@@ -106,87 +109,73 @@ export default function Home() {
                 </svg>
 
                 <h1 className="text-2xl font-bold py-4 text-center">
-                  Designer
+                  Front-end Developer
                 </h1>
                 <h2 className="text-lg font-semibold py-4 text-center text-gray-600">
-                  I value simple content structure, clean design patterns, and
-                  thoughtful interactions.
+                  I like to code things from scratch, and enjoy bringing ideas to life in the browser.
                 </h2>
 
                 <h3 className="text-violet-500 text-xl font-semibold pt-12 text-center">
-                  Things I enjoy designing:
+                  Languages I write:
                 </h3>
                 <h2 className="text-lg font-semibold py-4 text-center text-gray-600">
-                  UX, UI, Web, Mobile, Apps, Logos
+                  HTML, CSS, JavaScript, JSX, TypeScript, React JS
                 </h2>
 
                 <h3 className="text-violet-500 text-xl font-semibold pt-12 text-center pb-2">
-                  Design Tools I Use:
+                  Dev Tools:
                 </h3>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  VS Code
+                </h2>
+
+                <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
+                  Tailwind CSS
                 </h2>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  Bootstrap
                 </h2>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  React JS
                 </h2>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  Next JS
                 </h2>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  GitHub
+                </h2>
+                <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
+                  ESLint
                 </h2>
               </div>
 
               <div className="py-12">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-20 w-20 text-violet-500 mx-auto"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 text-violet-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                 </svg>
                 <h1 className="text-2xl font-bold py-4 text-center">
-                  Designer
+                  Back-end Developer
                 </h1>
                 <h2 className="text-lg font-semibold py-4 text-center text-gray-600">
-                  I value simple content structure, clean design patterns, and
-                  thoughtful interactions.
+                  I like to keep Back-end simple with efficiency in mind.
+
                 </h2>
 
                 <h3 className="text-violet-500 text-xl font-semibold pt-12 text-center">
-                  Things I enjoy designing:
+                  Services I use:
                 </h3>
                 <h2 className="text-lg font-semibold py-4 text-center text-gray-600">
-                  UX, UI, Web, Mobile, Apps, Logos
+                  Firebase, MongoDB, Moralis, Sanity, Node JS
                 </h2>
 
                 <h3 className="text-violet-500 text-xl font-semibold pt-12 text-center pb-2">
-                  Design Tools I Use:
+                  Tools I Use:
                 </h3>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  Node JS
                 </h2>
                 <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
-                </h2>
-                <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
-                </h2>
-                <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
-                </h2>
-                <h2 className="text-gray-600 text-center text-lg font-semibold py-2">
-                  Balsamiq Mockups
+                  Express.js
                 </h2>
               </div>
             </div>
@@ -199,17 +188,34 @@ export default function Home() {
               My Recent Work
             </h1>
             <h2 className="text-center text-xl pt-4 font-semibold text-gray-500">
-              Here are a few design projects I've worked on recently.{" "}
+              Here are a few projects I've worked on recently.{" "}
             </h2>
           </div>
 
           <div
-            className="my-24 grid grid-cols-3 max-w-7xl mx-auto gap-8 
+            className="my-24 grid grid-cols-3 max-w-7xl mx-auto gap-8
           justify-items-center pb-24"
           >
-            <div className="bg-cyan-500 w-64 h-36 rounded-2xl" />
-            <div className="bg-cyan-500 w-64 h-36 rounded-2xl" />
-            <div className="bg-cyan-500 w-64 h-36 rounded-2xl" />
+            <div className="flex flex-col justify-center items-center">
+              <img onClick={() => newTab()} className="bg-cyan-500 mt-1 w-80 h-38 rounded-2xl hover:brightness-75 cursor-pointer 
+            shadow-md hover:shadow-lg hover:shadow-fuchsia-200" src='/amazon.png' alt='' />
+              <h1 className="text-center text-lg font-semibold text-gray-500 py-2">Amazon Clone</h1>
+              <h2 className="text-center text-sm text-gray-500 font-medium"> made with React + Next JS, Firebase Firestore & Auth, Stripe API, Tailwind CSS</h2>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <img onClick={() => newTab1()} className="bg-cyan-500 w-80 h-38 rounded-2xl hover:brightness-75 cursor-pointer 
+            shadow-md hover:shadow-lg hover:shadow-fuchsia-200" src='/medium.png' alt='' />
+              <h1 className="text-center text-lg font-semibold text-gray-500 py-2">Medium Clone</h1>
+              <h2 className="text-center text-sm text-gray-500 font-medium"> made with React + Next JS, Firebase Auth, Sanity DB, Tailwind CSS</h2>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <img onClick={() => newTab2()} className="bg-cyan-500 w-80 h-38 rounded-2xl hover:brightness-75 cursor-pointer 
+            shadow-md hover:shadow-lg hover:shadow-fuchsia-200" src='/web3.png' alt='' />
+              <h1 className="text-center text-lg font-semibold text-gray-500 py-2">WEB 3.0 Chat App</h1>
+              <h2 className="text-center text-sm text-gray-500 font-medium"> made with React + Next JS, Moralis, Tailwind CSS</h2>
+            </div>
+
+
           </div>
 
           <div className="max-w-7xl mx-auto relative">
@@ -226,7 +232,8 @@ export default function Home() {
               </h1>
               <button
                 onClick={() => router.push("projectPlanner")}
-                className="border-2 border-violet-400 p-4 rounded-full text-xl font-bold text-white"
+                className="border-2 border-violet-400 p-4 rounded-full text-xl
+                 font-bold text-white hover:bg-white hover:text-violet-600"
               >
                 Let's do this
               </button>
@@ -245,6 +252,7 @@ export default function Home() {
 
         <div className="max-w-xl mx-auto py-12 flex justify-center items-center">
           <img
+            onClick={() => window.open('https://github.com/Intiaj')}
             src="/github.svg"
             className="h-12 w-12 mx-4 hover:bg-white rounded-full cursor-pointer"
             alt=""

@@ -6,7 +6,7 @@ function HeroComponent() {
   return (
     <div className="">
       <h1 className="text-center text-5xl font-bold">
-        Designer, Front-end Developer & Mentor
+       Full Stack Developer & Designer 
       </h1>
       <h2 className="text-center text-xl font-semibold py-8 text-gray-600">
         I design and code beautifully simple things, and I love what I do.
