@@ -51,11 +51,11 @@ function ProjectPlanner() {
           animate={{ opacity: 1, transition: { duration: 1 } }}
           alt=""
           src="hero.svg"
-          className="h-24 w-24 absolute top-20 right-1/2 rounded-full border border-violet-500 bg-white pt-1"
+          className="h-24 w-24 absolute top-12 left-36 rounded-full border border-violet-500 bg-white pt-1"
         />
 
         <motion.h1 initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1.5 } }} className="text-6xl text-center pt-24 font-semibold pb-12">
+          animate={{ opacity: 1, transition: { duration: 1.5 } }} className="md:text-6xl text-2xl text-center pt-24 font-semibold pb-12">
           I’m excited to learn about your project. Ready to get started?
         </motion.h1>
 
@@ -68,7 +68,7 @@ function ProjectPlanner() {
           </div> : null
         }
 
-        <div className="max-w-2xl mx-auto grid grid-cols-2 gap-8">
+        <div className="md:max-w-2xl max-w-xs mx-auto grid grid-cols-2 gap-8">
           <div>
             <h1 className="text-xl py-4 text-gray-500">Name</h1>
             <input onChange={(e) => setName(e.target.value)} type="text" className="border w-full h-12 rounded-md" />

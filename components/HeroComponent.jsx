@@ -13,14 +13,14 @@ function HeroComponent() {
           opacity: 1,
           transition: { delay: 0.2, duration: 0.4 },
         }}
-        className="text-center text-5xl font-bold"
+        className="text-center md:text-5xl font-bold text-4xl"
       >
         Full Stack Developer & Designer
       </motion.h1>
       <motion.h2
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
-        className="text-center text-xl font-semibold py-8 text-gray-600"
+        className="text-center md:text-xl font-semibold py-8 px-8 text-gray-600"
       >
         I design and code beautifully simple things, and I love what I do.
       </motion.h2>
@@ -40,8 +40,8 @@ function HeroComponent() {
         </motion.div>
       </div>
 
-      <div className="flex justify-center h-96">
-        <img src="/hero4.svg" className="w-full -my-48" alt="" />
+      <div className="flex justify-center md:h-96 h-64">
+        <img src="/hero4.svg" className="w-full md:-my-48 -my-56" alt="" />
       </div>
     </div>
   );

@@ -42,20 +42,20 @@ function Contact() {
 
 
   return (
-    <div className="max-w-7xl mx-auto relative">
+    <div className="md:max-w-7xl max-w-sm mx-auto relative">
       <Header home='false' />
       <motion.hr initial={{ x: '-100vw' }} animate={{ x: 0, transition: { duration: 0.7 } }} />
 
-      <div>
+      <div className="">
         <motion.img
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 1 } }}
           alt=""
           src="hero.svg"
-          className="h-24 w-24 absolute top-20 right-1/2 rounded-full border border-violet-500 bg-white pt-1"
+          className="h-24 w-24 absolute top-12 left-36 rounded-full border border-violet-500 bg-white pt-1"
         />
         <motion.h1 initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1.5 } }} className="text-6xl text-center pt-24 font-semibold pb-12">
+          animate={{ opacity: 1, transition: { duration: 1.5 } }} className="md:text-6xl text-2xl text-center pt-24 font-semibold pb-12">
           Thanks for taking the time to reach out. How can I help you today?
         </motion.h1>
 
@@ -69,7 +69,7 @@ function Contact() {
           </div> : null
         }
 
-        <div className="max-w-xl mx-auto">
+        <div className="md:max-w-xl max-w-xs mx-auto">
           <div className="flex gap-8">
             <div className="w-full">
               <h1 className="text-xl font-semibold text-gray-500 pb-4 ">
