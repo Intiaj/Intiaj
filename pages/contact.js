@@ -1,121 +1,97 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Header from "../components/Header";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  function sendEmail(e) {
+    e.preventDefault();
 
-    let data = {
-      name,
-      email,
-      message
-    }
-    if (message !== '' && email !== '' && name !== '') {
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
+    emailjs
+      .sendForm(
+        "service_lkh088d",
+        "template_1kvameo",
+        e.target,
+        "XR-GeDKFtbOoV9UOf"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
         },
-        body: JSON.stringify(data)
-      }).then((res) => {
-        if (res.status === 200) {
-          setSubmitted(true);
-          setName('');
-          setEmail('');
-          setMessage('');
-          setTimeout(() => { setSubmitted(false) }, 5000)
-        } else {
-          console.log('err');
+        (error) => {
+          console.log(error.text);
         }
-
-      })
-    }
+      );
+    e.target.reset();
   }
-
-
   return (
-    <div className="md:max-w-7xl max-w-sm mx-auto relative">
-      <Header home='false' />
-      <motion.hr initial={{ x: '-100vw' }} animate={{ x: 0, transition: { duration: 0.7 } }} />
+    <div>
+      <Header />
 
-      <div className="">
-        <motion.img
+      <hr className="max-w-7xl mx-auto" />
+
+      <main className="max-w-7xl mx-auto">
+        <motion.h1
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1 } }}
-          alt=""
-          src="hero.svg"
-          className="h-24 w-24 absolute top-12 left-36 rounded-full border border-violet-500 bg-white pt-1"
-        />
-        <motion.h1 initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1.5 } }} className="md:text-6xl text-2xl text-center pt-24 font-semibold pb-12">
-          Thanks for taking the time to reach out. How can I help you today?
+          animate={{ opacity: 1, transition: { duration: 1.5, delay: 1 } }}
+          className="py-12 font-bold md:text-3xl text-2xl text-center lg:text-4xl"
+        >
+          Thanks for taking the time to reach out.
+          <br /> How can I help you today?
         </motion.h1>
 
-
-        {
-          submitted ? <div className="bg-green-300 flex justify-center items-center px-8 py-2 my-12 rounded-full max-w-fit mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
-            <h1 className="pl-2 text-xl font-semibold">Submitted</h1>
-          </div> : null
-        }
-
-        <div className="md:max-w-xl max-w-xs mx-auto">
-          <div className="flex gap-8">
-            <div className="w-full">
-              <h1 className="text-xl font-semibold text-gray-500 pb-4 ">
-                Name
-              </h1>
+        <form onSubmit={sendEmail} className="">
+          <div className="flex gap-4 justify-center items-center mx-4">
+            <div className="flex flex-col w-1/3">
+              <label className="text-md font-bold text-gray-500">Name</label>
               <input
                 onChange={(e) => setName(e.target.value)}
-                required
-                title="Name"
+                className="border py-2 rounded "
                 type="text"
-                className="h-12 w-full border border-gray-400 rounded-md shadow-sm"
+                name="from_name"
+                required
               />
             </div>
 
-            <div className="w-full">
-              <h1 className="text-xl font-semibold text-gray-500 pb-4 ">
-                Email
-              </h1>
+            <div className="flex flex-col w-1/3">
+              <label className="text-md font-bold text-gray-500">Email</label>
               <input
                 onChange={(e) => setEmail(e.target.value)}
-                required
-                title="Email"
+                className="border py-2 rounded "
+                name="from_email"
                 type="email"
-                className="h-12 w-full border border-gray-400 rounded-md shadow-sm"
+                required
               />
             </div>
           </div>
 
-          <h1 className="text-xl font-semibold text-gray-500 pt-4 pb-4">
-            Message
-          </h1>
-          <textarea onChange={(e) => setMessage(e.target.value)} className="h-36 w-full border border-gray-400 rounded-md shadow-sm" />
-        </div>
+          <div className="max-w-xs md:max-w-xl lg:max-w-3xl mx-auto">
+            <div className="flex flex-col mx-3 py-4">
+              <label className="text-md font-bold text-gray-500">Message</label>
+              <textarea
+                onChange={(e) => setMessage(e.target.value)}
+                name="message"
+                required
+                className="border rounded"
+              />
+            </div>
+          </div>
 
-        <div className="flex justify-center items-center py-8">
-          <button
-            onClick={(e) => handleSubmit(e)}
-            className="px-6 py-2 border-2
-           border-violet-500 rounded-full text-lg font-semibold
-           text-violet-600 hover:border-none hover:text-white hover:bg-violet-500 shadow-sm
-            shadow-violet-300 hover:shadow-lg hover:shadow-violet-500"
-          >
-            Submit
-          </button>
-        </div>
-      </div>
+          <div className="flex justify-center">
+            <input
+              type="submit"
+              value={"Send"}
+              name=""
+              className="text-xl font-bold text-white bg-fuchsia-400 px-8 py-2
+               rounded-full shadow-lg hover:brightness-90 cursor-pointer shadow-fuchsia-300"
+            />
+          </div>
+        </form>
+      </main>
     </div>
   );
 }
