@@ -29,7 +29,7 @@ export default function Home() {
     window.open("https://medium-clone-ten.vercel.app", "_blank");
   };
   const newTab2 = () => {
-    window.open("https://web-3-git-main-intiaj.vercel.app/", "_blank");
+    window.open("https://krishworks-frontend-assignment.vercel.app/", "_blank");
   };
   return (
     <>
@@ -275,15 +275,15 @@ export default function Home() {
                     onClick={() => newTab2()}
                     className="bg-cyan-500 w-80 h-38 rounded-2xl hover:brightness-75 cursor-pointer 
             shadow-md hover:shadow-lg hover:shadow-fuchsia-200"
-                    src="/web3.png"
+                    src="/qwerty.png"
                     alt=""
                   />
                   <h1 className="text-center text-lg font-semibold text-gray-500 py-2">
-                    WEB 3.0 Chat App
+                    Patient Detail Page UI
                   </h1>
                   <h2 className="text-center text-sm text-gray-500 font-medium">
                     {" "}
-                    made with React + Next JS, Moralis, Tailwind CSS
+                    made with React + Next JS, Tailwind CSS
                   </h2>
                 </motion.div>
               </div>
@@ -960,11 +960,11 @@ export default function Home() {
                     alt=""
                   />
                   <h1 className="text-center text-lg font-semibold text-gray-500 py-2">
-                    WEB 3.0 Chat App
+                    Patient Detail Page
                   </h1>
                   <h2 className="text-center text-sm text-gray-500 font-medium">
                     {" "}
-                    made with React + Next JS, Moralis, Tailwind CSS
+                    made with React + Next JS, Tailwind CSS
                   </h2>
                 </motion.div>
               </div>
