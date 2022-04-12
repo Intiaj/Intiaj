@@ -29,7 +29,7 @@ export default function Home() {
     window.open("https://medium-clone-ten.vercel.app", "_blank");
   };
   const newTab2 = () => {
-    window.open("https://krishworks-frontend-assignment.vercel.app/", "_blank");
+    window.open("https://demo-page-pearl.vercel.app/", "_blank");
   };
   return (
     <>
